@@ -462,7 +462,7 @@
     // CREATING ALERTVIEW
     // CUSTOM SHAPING - Displaying Cut out circle for Vector Type Alerts
     
-    int radius = alertView.frame.size.width;
+    //int radius = alertView.frame.size.width;
     UIBezierPath *rectPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0,
                                                                                 0,
                                                                                 self.frame.size.width,
