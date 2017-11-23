@@ -789,7 +789,7 @@
     // ADDING AND INITIALIZING FCALERTVIEW
     
     FCAlertView *alert = [[FCAlertView alloc] init]; // 2) Add This Where you Want to Create an FCAlertView
-    
+    alert.fullCircleCustomImage = YES;
     //For use with Attributed Text demo
     BOOL useAttributedTitle = NO;
     BOOL useAttributedSubTitle = NO;
@@ -804,7 +804,7 @@
         self.alertImage = nil;
     
     if ([[[_alertViewOptions objectAtIndex:0] objectForKey:@"setting"] isEqual:@"On"])
-        self.alertImage = [UIImage imageNamed:@"github-icon.png"];
+        self.alertImage = [UIImage imageNamed:@"check"];
     
     // Setting FCAlertView's Color Scheme
     
