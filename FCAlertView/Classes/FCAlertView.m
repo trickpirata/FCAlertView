@@ -468,12 +468,12 @@
                                                                                 self.frame.size.width,
                                                                                 alertView.bounds.size.height)
                                                         cornerRadius:0];
-    UIBezierPath *circlePath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(alertViewFrame.size.width/2 - 33.75f,
+    /*UIBezierPath *circlePath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(alertViewFrame.size.width/2 - 33.75f,
                                                                                   -33.75f,
                                                                                   67.5f,
                                                                                   67.5f)
                                                           cornerRadius:radius];
-    [rectPath appendPath:circlePath];
+    [rectPath appendPath:circlePath];*/
     [rectPath setUsesEvenOddFillRule:YES];
     
     CAShapeLayer *fillLayer = [CAShapeLayer layer];
@@ -943,13 +943,16 @@
     
     UIImageView *alertViewVector;
     
-    if (_avoidCustomImageTint && alertType.length == 0) {
+    /*if (_avoidCustomImageTint && alertType.length == 0) {
         alertViewVector = [[UIImageView alloc] init];
         alertViewVector.image = vectorImage;
     } else {
         alertViewVector = [[UIImageView alloc] init];
         alertViewVector.image = [vectorImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    }
+    }*/
+    
+    alertViewVector = [[UIImageView alloc] init];
+    alertViewVector.image = vectorImage;
     
     if (_fullCircleCustomImage)
         _customImageScale = 2;
@@ -961,7 +964,7 @@
     CGFloat vectorSize = 30.0f * MIN(2, _customImageScale);
     
     alertViewVector.frame = CGRectMake(alertViewContents.frame.size.width/2 - (vectorSize/2),
-                                       -(vectorSize/2) - 0.5,
+                                       10,
                                        vectorSize,
                                        vectorSize);
     
